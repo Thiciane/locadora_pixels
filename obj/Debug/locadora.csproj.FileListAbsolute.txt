@@ -1,0 +1,12 @@
+C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\bin\Debug\locadora.exe.config
+C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\bin\Debug\locadora.exe
+C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\bin\Debug\locadora.pdb
+C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\obj\Debug\locadora.csproj.AssemblyReference.cache
+C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\obj\Debug\locadora.csproj.SuggestedBindingRedirects.cache
+C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\obj\Debug\locadora.Properties.Resources.resources
+C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\obj\Debug\locadora.view.aluguel.resources
+C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\obj\Debug\locadoraCarros_poo.view.reservaa.resources
+C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\obj\Debug\locadora.csproj.GenerateResource.cache
+C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\obj\Debug\locadora.csproj.CoreCompileInputs.cache
+C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\obj\Debug\locadora.exe
+C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\obj\Debug\locadora.pdb
