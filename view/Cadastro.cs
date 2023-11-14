@@ -40,9 +40,10 @@ namespace locadora.view
                 cliente.AddCliente(cliente);
 
                 Home home = new Home();
-                home.lbLoginCadastro.Text = cliente.Nome;
-                home.lbLoginCadastro.Location = new Point(0, 32);//.X = -562;
-                home.lbLoginCadastro.Left = 3;
+                home.lbUsuario.Text = cliente.Nome;
+                home.lbLoginCadastro.Text = String.Empty;
+                home.lbAlugar.Text = "Alugar";
+                home.lbReservar.Text = "Reservar";
                 home.ShowDialog();
                 Close();
 
@@ -51,11 +52,6 @@ namespace locadora.view
             {
                 MessageBox.Show("Usuário já cadastrado");
             }
-        }
-
-        private void Cadastro_Load_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

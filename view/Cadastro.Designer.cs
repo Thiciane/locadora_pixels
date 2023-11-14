@@ -61,7 +61,7 @@
             this.label1.Location = new System.Drawing.Point(7, 135);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 25);
+            this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
             // 
@@ -72,7 +72,7 @@
             this.label2.Location = new System.Drawing.Point(10, 237);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 25);
+            this.label2.Size = new System.Drawing.Size(58, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Email:";
             // 
@@ -82,7 +82,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(816, 135);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 25);
+            this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Sexo:";
             // 
@@ -92,7 +92,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(10, 509);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 25);
+            this.label4.Size = new System.Drawing.Size(101, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Localidade:";
             // 
@@ -102,7 +102,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(875, 237);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 25);
+            this.label5.Size = new System.Drawing.Size(84, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Telefone:";
             // 
@@ -112,7 +112,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(8, 330);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 25);
+            this.label6.Size = new System.Drawing.Size(48, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "CPF:";
             // 
@@ -122,7 +122,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(875, 330);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 25);
+            this.label7.Size = new System.Drawing.Size(51, 20);
             this.label7.TabIndex = 6;
             this.label7.Text = "CNH:";
             // 
@@ -132,7 +132,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(10, 423);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 25);
+            this.label8.Size = new System.Drawing.Size(49, 20);
             this.label8.TabIndex = 7;
             this.label8.Text = "CEP:";
             // 
@@ -142,7 +142,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(300, 423);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 25);
+            this.label9.Size = new System.Drawing.Size(62, 20);
             this.label9.TabIndex = 8;
             this.label9.Text = "Bairro:";
             // 
@@ -151,7 +151,7 @@
             this.tbNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tbNome.Location = new System.Drawing.Point(12, 158);
             this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(527, 30);
+            this.tbNome.Size = new System.Drawing.Size(527, 26);
             this.tbNome.TabIndex = 9;
             // 
             // tbEmail
@@ -159,7 +159,7 @@
             this.tbEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tbEmail.Location = new System.Drawing.Point(12, 260);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(433, 30);
+            this.tbEmail.Size = new System.Drawing.Size(433, 26);
             this.tbEmail.TabIndex = 10;
             // 
             // mkCep
@@ -168,7 +168,6 @@
             this.mkCep.Location = new System.Drawing.Point(14, 446);
             this.mkCep.Mask = "00000-000";
             this.mkCep.Name = "mkCep";
-            this.mkCep.Size = new System.Drawing.Size(97, 30);
             this.mkCep.Size = new System.Drawing.Size(110, 26);
             this.mkCep.TabIndex = 12;
             this.mkCep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -179,7 +178,6 @@
             this.mkTelefone.Location = new System.Drawing.Point(879, 260);
             this.mkTelefone.Mask = "(99) 0000-0000";
             this.mkTelefone.Name = "mkTelefone";
-            this.mkTelefone.Size = new System.Drawing.Size(132, 30);
             this.mkTelefone.Size = new System.Drawing.Size(149, 26);
             this.mkTelefone.TabIndex = 13;
             this.mkTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -189,7 +187,7 @@
             this.tbBairro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tbBairro.Location = new System.Drawing.Point(304, 446);
             this.tbBairro.Name = "tbBairro";
-            this.tbBairro.Size = new System.Drawing.Size(415, 30);
+            this.tbBairro.Size = new System.Drawing.Size(415, 26);
             this.tbBairro.TabIndex = 14;
             // 
             // tbLocalidade
@@ -197,7 +195,7 @@
             this.tbLocalidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tbLocalidade.Location = new System.Drawing.Point(14, 532);
             this.tbLocalidade.Name = "tbLocalidade";
-            this.tbLocalidade.Size = new System.Drawing.Size(705, 30);
+            this.tbLocalidade.Size = new System.Drawing.Size(705, 26);
             this.tbLocalidade.TabIndex = 15;
             // 
             // mkCpf
@@ -206,7 +204,6 @@
             this.mkCpf.Location = new System.Drawing.Point(12, 353);
             this.mkCpf.Mask = "000,000,000-00";
             this.mkCpf.Name = "mkCpf";
-            this.mkCpf.Size = new System.Drawing.Size(138, 30);
             this.mkCpf.Size = new System.Drawing.Size(155, 26);
             this.mkCpf.TabIndex = 16;
             this.mkCpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -217,7 +214,6 @@
             this.mkCnh.Location = new System.Drawing.Point(879, 353);
             this.mkCnh.Mask = "0000000000";
             this.mkCnh.Name = "mkCnh";
-            this.mkCnh.Size = new System.Drawing.Size(108, 30);
             this.mkCnh.Size = new System.Drawing.Size(149, 26);
             this.mkCnh.TabIndex = 17;
             this.mkCnh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -232,7 +228,7 @@
             "Outro"});
             this.cbSexo.Location = new System.Drawing.Point(820, 158);
             this.cbSexo.Name = "cbSexo";
-            this.cbSexo.Size = new System.Drawing.Size(208, 33);
+            this.cbSexo.Size = new System.Drawing.Size(208, 28);
             this.cbSexo.TabIndex = 18;
             // 
             // bCadastrar
@@ -261,10 +257,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
             this.label10.Location = new System.Drawing.Point(159, 39);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(174, 31);
+            this.label10.Size = new System.Drawing.Size(140, 28);
             this.label10.TabIndex = 1;
             this.label10.Text = "CADASTRO";
             // 
@@ -280,7 +276,7 @@
             // 
             // Cadastro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
             this.ClientSize = new System.Drawing.Size(1040, 718);

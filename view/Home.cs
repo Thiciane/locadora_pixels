@@ -15,6 +15,10 @@ namespace locadora
         public Home()
         {
             InitializeComponent();
+            lbAlugar.Text = String.Empty;
+            lbReservar.Text = String.Empty;
+            lbUsuario.Text = String.Empty;
+            lbLoginCadastro.Location = new Point(700, 32);
         }
 
         view.Login login = new view.Login();
@@ -57,6 +61,11 @@ namespace locadora
         private void bt_irLogin_Click(object sender, EventArgs e)
         {
             login.ShowDialog();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
