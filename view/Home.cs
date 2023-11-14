@@ -42,14 +42,16 @@ namespace locadora
 
         private void lbAlugar_Click(object sender, EventArgs e)
         {
-            //view.Alugar alugar = new view.Alugar();
-            //alugar.ShowDialog();
+            view.Aluguel alugar = new view.Aluguel();
+            alugar.ShowDialog();
+            Close();
         }
 
         private void lbReservar_Click(object sender, EventArgs e)
         {
-            //view.Reserva reserva = new view.Reserva();
-            //reserva.ShowDialog();
+            view.Reserva reserva = new view.Reserva();
+            reserva.ShowDialog();
+            Close();
         }
 
         private void bt_irLogin_Click(object sender, EventArgs e)

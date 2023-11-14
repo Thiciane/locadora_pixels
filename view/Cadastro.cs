@@ -40,9 +40,9 @@ namespace locadora.view
                 cliente.AddCliente(cliente);
 
                 Home home = new Home();
-                //home.lbLoginCadastro.Text = cliente.Nome;
-                //home.lbLoginCadastro.Location = new Point(0, 32);//.X = -562;
-                //home.lbLoginCadastro.Left = 3;
+                home.lbLoginCadastro.Text = cliente.Nome;
+                home.lbLoginCadastro.Location = new Point(0, 32);//.X = -562;
+                home.lbLoginCadastro.Left = 3;
                 home.ShowDialog();
                 Close();
 

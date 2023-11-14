@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace locadora.view
 {
-    public partial class Reservaa : Form
+    public partial class Reserva : Form
     {
-        public Reservaa()
+        public Reserva()
         {
             //InitializeComponent();
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

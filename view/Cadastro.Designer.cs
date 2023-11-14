@@ -11,6 +11,14 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
         #region Windows Form Designer generated code
 
@@ -143,7 +151,7 @@
             this.tbNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tbNome.Location = new System.Drawing.Point(12, 158);
             this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(527, 20);
+            this.tbNome.Size = new System.Drawing.Size(527, 30);
             this.tbNome.TabIndex = 9;
             // 
             // tbEmail
@@ -151,7 +159,7 @@
             this.tbEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tbEmail.Location = new System.Drawing.Point(12, 260);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(433, 20);
+            this.tbEmail.Size = new System.Drawing.Size(433, 30);
             this.tbEmail.TabIndex = 10;
             // 
             // mkCep
@@ -160,7 +168,8 @@
             this.mkCep.Location = new System.Drawing.Point(14, 446);
             this.mkCep.Mask = "00000-000";
             this.mkCep.Name = "mkCep";
-            this.mkCep.Size = new System.Drawing.Size(110, 20);
+            this.mkCep.Size = new System.Drawing.Size(97, 30);
+            this.mkCep.Size = new System.Drawing.Size(110, 26);
             this.mkCep.TabIndex = 12;
             this.mkCep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -170,7 +179,8 @@
             this.mkTelefone.Location = new System.Drawing.Point(879, 260);
             this.mkTelefone.Mask = "(99) 0000-0000";
             this.mkTelefone.Name = "mkTelefone";
-            this.mkTelefone.Size = new System.Drawing.Size(149, 20);
+            this.mkTelefone.Size = new System.Drawing.Size(132, 30);
+            this.mkTelefone.Size = new System.Drawing.Size(149, 26);
             this.mkTelefone.TabIndex = 13;
             this.mkTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -179,7 +189,7 @@
             this.tbBairro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tbBairro.Location = new System.Drawing.Point(304, 446);
             this.tbBairro.Name = "tbBairro";
-            this.tbBairro.Size = new System.Drawing.Size(415, 20);
+            this.tbBairro.Size = new System.Drawing.Size(415, 30);
             this.tbBairro.TabIndex = 14;
             // 
             // tbLocalidade
@@ -187,7 +197,7 @@
             this.tbLocalidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tbLocalidade.Location = new System.Drawing.Point(14, 532);
             this.tbLocalidade.Name = "tbLocalidade";
-            this.tbLocalidade.Size = new System.Drawing.Size(705, 20);
+            this.tbLocalidade.Size = new System.Drawing.Size(705, 30);
             this.tbLocalidade.TabIndex = 15;
             // 
             // mkCpf
@@ -196,7 +206,8 @@
             this.mkCpf.Location = new System.Drawing.Point(12, 353);
             this.mkCpf.Mask = "000,000,000-00";
             this.mkCpf.Name = "mkCpf";
-            this.mkCpf.Size = new System.Drawing.Size(155, 20);
+            this.mkCpf.Size = new System.Drawing.Size(138, 30);
+            this.mkCpf.Size = new System.Drawing.Size(155, 26);
             this.mkCpf.TabIndex = 16;
             this.mkCpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -206,7 +217,8 @@
             this.mkCnh.Location = new System.Drawing.Point(879, 353);
             this.mkCnh.Mask = "0000000000";
             this.mkCnh.Name = "mkCnh";
-            this.mkCnh.Size = new System.Drawing.Size(149, 20);
+            this.mkCnh.Size = new System.Drawing.Size(108, 30);
+            this.mkCnh.Size = new System.Drawing.Size(149, 26);
             this.mkCnh.TabIndex = 17;
             this.mkCnh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -220,7 +232,7 @@
             "Outro"});
             this.cbSexo.Location = new System.Drawing.Point(820, 158);
             this.cbSexo.Name = "cbSexo";
-            this.cbSexo.Size = new System.Drawing.Size(208, 21);
+            this.cbSexo.Size = new System.Drawing.Size(208, 33);
             this.cbSexo.TabIndex = 18;
             // 
             // bCadastrar
@@ -233,6 +245,7 @@
             this.bCadastrar.TabIndex = 19;
             this.bCadastrar.Text = "Cadastrar";
             this.bCadastrar.UseVisualStyleBackColor = true;
+            this.bCadastrar.Click += new System.EventHandler(this.bCadastrar_Click);
             // 
             // panel1
             // 
@@ -251,12 +264,13 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(159, 39);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(136, 25);
+            this.label10.Size = new System.Drawing.Size(174, 31);
             this.label10.TabIndex = 1;
             this.label10.Text = "CADASTRO";
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::locadora.Properties.Resources.logoFundoTransparente;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(139, 100);
@@ -266,13 +280,44 @@
             // 
             // Cadastro
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
+            this.ClientSize = new System.Drawing.Size(1040, 718);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.bCadastrar);
+            this.Controls.Add(this.cbSexo);
+            this.Controls.Add(this.mkCnh);
+            this.Controls.Add(this.mkCpf);
+            this.Controls.Add(this.tbLocalidade);
+            this.Controls.Add(this.tbBairro);
+            this.Controls.Add(this.mkTelefone);
+            this.Controls.Add(this.mkCep);
+            this.Controls.Add(this.tbEmail);
+            this.Controls.Add(this.tbNome);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.White;
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Cadastro";
-            this.Load += new System.EventHandler(this.Cadastro_Load_1);
+            this.ShowIcon = false;
+            this.Text = "Cadastro";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Cadastro_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
