@@ -16,5 +16,45 @@ namespace locadora
         {
             InitializeComponent();
         }
+
+        view.Login login = new view.Login();
+        private int imageNumber = 0;
+        private void LoadNextImage()
+        {
+            if (imageNumber == 6)
+            {
+                imageNumber = 1;
+            }
+            slidePic.ImageLocation = string.Format(@"Images\carrosselCarros\{0}.png", imageNumber);
+            imageNumber++;
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            LoadNextImage();
+        }
+        private void lbLoginCadastro_Click(object sender, EventArgs e)
+        {
+            login.ShowDialog();
+            Close();
+
+        }
+
+        private void lbAlugar_Click(object sender, EventArgs e)
+        {
+            //view.Alugar alugar = new view.Alugar();
+            //alugar.ShowDialog();
+        }
+
+        private void lbReservar_Click(object sender, EventArgs e)
+        {
+            //view.Reserva reserva = new view.Reserva();
+            //reserva.ShowDialog();
+        }
+
+        private void bt_irLogin_Click(object sender, EventArgs e)
+        {
+            login.ShowDialog();
+        }
     }
 }
