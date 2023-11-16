@@ -31,6 +31,7 @@
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.lb_VLdia = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +73,16 @@
             this.label10.Size = new System.Drawing.Size(111, 28);
             this.label10.TabIndex = 5;
             this.label10.Text = "RESERVA";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::locadora.Properties.Resources.logoFundoTransparente;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(158, 108);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
             // 
             // cbSexo
             // 
@@ -124,7 +134,6 @@
             this.label7.Size = new System.Drawing.Size(342, 20);
             this.label7.TabIndex = 19;
             this.label7.Text = "Por quantos dias deseja alugar o veículo?";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // comboBox1
             // 
@@ -182,16 +191,6 @@
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::locadora.Properties.Resources.logoFundoTransparente;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(158, 108);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
             // Reserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -213,6 +212,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Reserva";
             this.Text = "Reservaa";
+            this.Load += new System.EventHandler(this.Reserva_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

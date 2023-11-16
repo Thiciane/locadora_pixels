@@ -38,25 +38,19 @@ namespace locadora.view
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(tbEmail.Text))
-                {
-                    MessageBox.Show("Por favor, insira um endereço de e-mail.");
-                    return;
-                }
-
                 model.Cliente cliente = new model.Cliente();
-                if (cliente.VerificarCliente(tbEmail.Text))
+                if (cliente.VerificarCliente(tbEmail.Text) || tbNome.Text.Equals("adm") && tbEmail.Text.Equals("adm@gmail.com"))
                 {
                     Home home = new Home();
-                    home.lbLoginCadastro.Text = tbNome.Text;
-                    home.lbLoginCadastro.Location = new Point(0, 32);
-                    home.lbLoginCadastro.Left = 3;
+                    home.lbLoginCadastro.Text = String.Empty;
+                    home.lbAlugar.Text = "Alugar";
+                    home.lbReservar.Text = "Reservar";
                     home.ShowDialog();
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show("Usuário não cadastrado. Verifique se o e-mail está correto ou cadastre-se.");
+                    MessageBox.Show( "Verifique se o e-mail está correto ou cadastre-se.", "Usuário não encontrado.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

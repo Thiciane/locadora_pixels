@@ -30,9 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -40,12 +38,10 @@
             this.tbNome = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.mkCep = new System.Windows.Forms.MaskedTextBox();
-            this.mkTelefone = new System.Windows.Forms.MaskedTextBox();
             this.tbBairro = new System.Windows.Forms.TextBox();
             this.tbLocalidade = new System.Windows.Forms.TextBox();
             this.mkCpf = new System.Windows.Forms.MaskedTextBox();
             this.mkCnh = new System.Windows.Forms.MaskedTextBox();
-            this.cbSexo = new System.Windows.Forms.ComboBox();
             this.bCadastrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -76,16 +72,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Email:";
             // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(816, 135);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Sexo:";
-            // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -95,16 +81,6 @@
             this.label4.Size = new System.Drawing.Size(101, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Localidade:";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(875, 237);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Telefone:";
             // 
             // label6
             // 
@@ -172,16 +148,6 @@
             this.mkCep.TabIndex = 12;
             this.mkCep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // mkTelefone
-            // 
-            this.mkTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.mkTelefone.Location = new System.Drawing.Point(879, 260);
-            this.mkTelefone.Mask = "(99) 0000-0000";
-            this.mkTelefone.Name = "mkTelefone";
-            this.mkTelefone.Size = new System.Drawing.Size(149, 26);
-            this.mkTelefone.TabIndex = 13;
-            this.mkTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // tbBairro
             // 
             this.tbBairro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -217,19 +183,6 @@
             this.mkCnh.Size = new System.Drawing.Size(149, 26);
             this.mkCnh.TabIndex = 17;
             this.mkCnh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // cbSexo
-            // 
-            this.cbSexo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cbSexo.FormattingEnabled = true;
-            this.cbSexo.Items.AddRange(new object[] {
-            "Feminino",
-            "Masculino",
-            "Outro"});
-            this.cbSexo.Location = new System.Drawing.Point(820, 158);
-            this.cbSexo.Name = "cbSexo";
-            this.cbSexo.Size = new System.Drawing.Size(208, 28);
-            this.cbSexo.TabIndex = 18;
             // 
             // bCadastrar
             // 
@@ -282,12 +235,10 @@
             this.ClientSize = new System.Drawing.Size(1040, 718);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bCadastrar);
-            this.Controls.Add(this.cbSexo);
             this.Controls.Add(this.mkCnh);
             this.Controls.Add(this.mkCpf);
             this.Controls.Add(this.tbLocalidade);
             this.Controls.Add(this.tbBairro);
-            this.Controls.Add(this.mkTelefone);
             this.Controls.Add(this.mkCep);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.tbNome);
@@ -295,9 +246,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -321,9 +270,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -331,12 +278,10 @@
         private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.MaskedTextBox mkCep;
-        private System.Windows.Forms.MaskedTextBox mkTelefone;
         private System.Windows.Forms.TextBox tbBairro;
         private System.Windows.Forms.TextBox tbLocalidade;
         private System.Windows.Forms.MaskedTextBox mkCpf;
         private System.Windows.Forms.MaskedTextBox mkCnh;
-        private System.Windows.Forms.ComboBox cbSexo;
         private System.Windows.Forms.Button bCadastrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;

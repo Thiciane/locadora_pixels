@@ -14,10 +14,10 @@ namespace locadora.view
     {
         public Reserva()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void Reserva_Load(object sender, EventArgs e)
         {
 
         }

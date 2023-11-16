@@ -12,6 +12,7 @@ namespace locadora.view
 {
     public partial class Cadastro : Form
     {
+
         public Cadastro()
         {
             InitializeComponent();
@@ -27,11 +28,9 @@ namespace locadora.view
             model.Cliente cliente = new model.Cliente();
             cliente.Nome = tbNome.Text;
             cliente.Email = tbEmail.Text;
-            cliente.Sexo = cbSexo.Text;
             cliente.Cep = mkCep.Text;
             cliente.Bairro = tbBairro.Text;
             cliente.Localidade = tbLocalidade.Text;
-            cliente.Telefone = mkTelefone.Text;
             cliente.Cpf = mkCpf.Text;
             cliente.Cnh = mkCnh.Text;
 
@@ -48,9 +47,9 @@ namespace locadora.view
                 Close();
 
             }
-            else
+            else if(tbNome.Text.Equals("adm") && tbEmail.Text.Equals("adm@gmail.com"))
             {
-                MessageBox.Show("Usuário já cadastrado");
+                MessageBox.Show("Usuário já cadastrado", "Faça login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

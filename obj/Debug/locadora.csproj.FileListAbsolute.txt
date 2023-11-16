@@ -13,3 +13,6 @@ C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\obj\Debug\locadora
 C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\obj\Debug\locadora.csproj.CoreCompileInputs.cache
 C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\obj\Debug\locadora.exe
 C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\obj\Debug\locadora.pdb
+C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\bin\Debug\Newtonsoft.Json.dll
+C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\bin\Debug\Newtonsoft.Json.xml
+C:\Users\thici\OneDrive\Documentos\IFRO\PCC\locadora\locadora\obj\Debug\locadora.csproj.CopyComplete
