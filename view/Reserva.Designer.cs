@@ -28,39 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.cbSexo = new System.Windows.Forms.ComboBox();
+            this.cbMarca = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lb_VLdia = new System.Windows.Forms.Label();
+            this.cbModelo = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.nDias = new System.Windows.Forms.NumericUpDown();
+            this.lValores = new System.Windows.Forms.Label();
+            this.lValorTotal = new System.Windows.Forms.Label();
+            this.lb_VLdia = new System.Windows.Forms.Label();
+            this.lbValorTotalN = new System.Windows.Forms.Label();
+            this.lbValorDiaN = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDias)).BeginInit();
             this.SuspendLayout();
-            // 
-            // domainUpDown1
-            // 
-            this.domainUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.domainUpDown1.Location = new System.Drawing.Point(36, 162);
-            this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.Size = new System.Drawing.Size(309, 29);
-            this.domainUpDown1.TabIndex = 2;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(-3, 2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1014, 111);
+            this.panel1.Size = new System.Drawing.Size(1012, 111);
             this.panel1.TabIndex = 3;
             // 
             // label10
@@ -84,19 +81,18 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // cbSexo
+            // cbMarca
             // 
-            this.cbSexo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSexo.FormattingEnabled = true;
-            this.cbSexo.Items.AddRange(new object[] {
-            "Feminino",
-            "Masculino",
-            "Outro"});
-            this.cbSexo.Location = new System.Drawing.Point(36, 260);
-            this.cbSexo.Name = "cbSexo";
-            this.cbSexo.Size = new System.Drawing.Size(234, 32);
-            this.cbSexo.TabIndex = 32;
+            this.cbMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMarca.FormattingEnabled = true;
+            this.cbMarca.Items.AddRange(new object[] {
+            "Chevrolet",
+            "Fiat"});
+            this.cbMarca.Location = new System.Drawing.Point(36, 260);
+            this.cbMarca.Name = "cbMarca";
+            this.cbMarca.Size = new System.Drawing.Size(234, 32);
+            this.cbMarca.TabIndex = 32;
             // 
             // label9
             // 
@@ -134,44 +130,25 @@
             this.label7.Size = new System.Drawing.Size(342, 20);
             this.label7.TabIndex = 19;
             this.label7.Text = "Por quantos dias deseja alugar o veículo?";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // comboBox1
+            // cbModelo
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Feminino",
-            "Masculino",
-            "Outro"});
-            this.comboBox1.Location = new System.Drawing.Point(36, 382);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(234, 32);
-            this.comboBox1.TabIndex = 33;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(435, 299);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 20);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Valor total:";
-            // 
-            // lb_VLdia
-            // 
-            this.lb_VLdia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lb_VLdia.AutoSize = true;
-            this.lb_VLdia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_VLdia.ForeColor = System.Drawing.Color.White;
-            this.lb_VLdia.Location = new System.Drawing.Point(435, 239);
-            this.lb_VLdia.Name = "lb_VLdia";
-            this.lb_VLdia.Size = new System.Drawing.Size(116, 20);
-            this.lb_VLdia.TabIndex = 35;
-            this.lb_VLdia.Text = "Valor por dia:";
+            this.cbModelo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cbModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbModelo.FormattingEnabled = true;
+            this.cbModelo.Items.AddRange(new object[] {
+            "Montana",
+            "S10",
+            "Onix",
+            "",
+            "Strada",
+            "Cronos",
+            "Mobi"});
+            this.cbModelo.Location = new System.Drawing.Point(36, 382);
+            this.cbModelo.Name = "cbModelo";
+            this.cbModelo.Size = new System.Drawing.Size(234, 32);
+            this.cbModelo.TabIndex = 33;
             // 
             // button1
             // 
@@ -181,6 +158,7 @@
             this.button1.TabIndex = 36;
             this.button1.Text = "Reservar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -191,49 +169,118 @@
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // nDias
+            // 
+            this.nDias.Location = new System.Drawing.Point(36, 164);
+            this.nDias.Name = "nDias";
+            this.nDias.Size = new System.Drawing.Size(122, 26);
+            this.nDias.TabIndex = 38;
+            // 
+            // lValores
+            // 
+            this.lValores.AutoSize = true;
+            this.lValores.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lValores.Location = new System.Drawing.Point(544, 141);
+            this.lValores.Name = "lValores";
+            this.lValores.Size = new System.Drawing.Size(74, 18);
+            this.lValores.TabIndex = 36;
+            this.lValores.Text = "Valores:";
+            // 
+            // lValorTotal
+            // 
+            this.lValorTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lValorTotal.AutoSize = true;
+            this.lValorTotal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lValorTotal.ForeColor = System.Drawing.Color.Black;
+            this.lValorTotal.Location = new System.Drawing.Point(896, 141);
+            this.lValorTotal.Name = "lValorTotal";
+            this.lValorTotal.Size = new System.Drawing.Size(95, 18);
+            this.lValorTotal.TabIndex = 34;
+            this.lValorTotal.Text = "Valor total:";
+            this.lValorTotal.Click += new System.EventHandler(this.lValorTotal_Click);
+            // 
+            // lb_VLdia
+            // 
+            this.lb_VLdia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lb_VLdia.AutoSize = true;
+            this.lb_VLdia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_VLdia.ForeColor = System.Drawing.Color.Black;
+            this.lb_VLdia.Location = new System.Drawing.Point(504, 172);
+            this.lb_VLdia.Name = "lb_VLdia";
+            this.lb_VLdia.Size = new System.Drawing.Size(114, 18);
+            this.lb_VLdia.TabIndex = 35;
+            this.lb_VLdia.Text = "Valor por dia:";
+            // 
+            // lbValorTotalN
+            // 
+            this.lbValorTotalN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lbValorTotalN.AutoSize = true;
+            this.lbValorTotalN.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValorTotalN.ForeColor = System.Drawing.Color.Black;
+            this.lbValorTotalN.Location = new System.Drawing.Point(905, 192);
+            this.lbValorTotalN.Name = "lbValorTotalN";
+            this.lbValorTotalN.Size = new System.Drawing.Size(95, 18);
+            this.lbValorTotalN.TabIndex = 37;
+            this.lbValorTotalN.Text = "Valor total:";
+            // 
+            // lbValorDiaN
+            // 
+            this.lbValorDiaN.Location = new System.Drawing.Point(763, 237);
+            this.lbValorDiaN.Name = "lbValorDiaN";
+            this.lbValorDiaN.Size = new System.Drawing.Size(100, 26);
+            this.lbValorDiaN.TabIndex = 39;
+            // 
             // Reserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
             this.ClientSize = new System.Drawing.Size(1012, 674);
+            this.Controls.Add(this.lbValorDiaN);
+            this.Controls.Add(this.lbValorTotalN);
+            this.Controls.Add(this.lValorTotal);
+            this.Controls.Add(this.lb_VLdia);
+            this.Controls.Add(this.nDias);
+            this.Controls.Add(this.lValores);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.lb_VLdia);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.cbSexo);
+            this.Controls.Add(this.cbModelo);
+            this.Controls.Add(this.cbMarca);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.domainUpDown1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Reserva";
             this.Text = "Reservaa";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Reserva_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DomainUpDown domainUpDown1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cbSexo;
+        private System.Windows.Forms.ComboBox cbMarca;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lb_VLdia;
+        private System.Windows.Forms.ComboBox cbModelo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.NumericUpDown nDias;
+        private System.Windows.Forms.Label lValores;
+        private System.Windows.Forms.Label lValorTotal;
+        private System.Windows.Forms.Label lb_VLdia;
+        private System.Windows.Forms.Label lbValorTotalN;
+        private System.Windows.Forms.TextBox lbValorDiaN;
     }
 }
