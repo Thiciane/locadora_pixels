@@ -1,26 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace locadora.view
 {
     public partial class Login : Form
     {
+        model.ClienteMetodos clienteMet = new model.ClienteMetodos();
+        model.Cliente cliente = new model.Cliente();
+
+
         public Login()
         {
             InitializeComponent();
         }
-
-        private void bt_logar_Click(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
-            Home home = new Home();
-            home.ShowDialog();
+            clienteMet.ListarClientes();
         }
         private void lbCadastro_Click(object sender, EventArgs e)
         {
@@ -29,17 +24,12 @@ namespace locadora.view
             Close();
 
         }
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void bLogar_Click(object sender, EventArgs e)
         {
             try
             {
-                model.Cliente cliente = new model.Cliente();
-                if (cliente.VerificarCliente(tbEmail.Text) || tbNome.Text.Equals("adm") && tbEmail.Text.Equals("adm@gmail.com"))
+                if (clienteMet.VerificarCliente(tbEmail.Text))
                 {
                     Home home = new Home();
                     home.lbLoginCadastro.Text = String.Empty;
@@ -58,16 +48,6 @@ namespace locadora.view
             {
                 MessageBox.Show($"Ocorreu um erro: {ex.Message}");
             }
-        }
-
-        private void tbNome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbEmail_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="model\Carro.cs" />
     <Compile Include="model\Cliente.cs" />
+    <Compile Include="model\ClienteMetodos.cs" />
     <Compile Include="model\Locacao.cs" />
     <Compile Include="model\Reserva.cs" />
     <Compile Include="view\Aluguel.cs">

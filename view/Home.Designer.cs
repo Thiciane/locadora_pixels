@@ -30,33 +30,38 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Timer timer2;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lbLoginCadastro = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.lbReservar = new System.Windows.Forms.Label();
             this.lbAlugar = new System.Windows.Forms.Label();
-            this.lbUsuario = new System.Windows.Forms.Label();
+            this.lbLoginCadastro = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer2
             // 
+            timer2.Enabled = true;
             timer2.Interval = 3000;
+            timer2.Tick += new System.EventHandler(this.timer2_Tick_1);
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -64,6 +69,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(947, 592);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(943, 588);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
             // 
             // button1
             // 
@@ -83,56 +99,14 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
+            // label1
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.ForeColor = System.Drawing.SystemColors.Window;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(947, 186);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Controls.Add(this.lbUsuario);
-            this.panel3.Controls.Add(this.lbReservar);
-            this.panel3.Controls.Add(this.lbAlugar);
-            this.panel3.Controls.Add(this.lbLoginCadastro);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(947, 100);
-            this.panel3.TabIndex = 3;
-            // 
-            // lbLoginCadastro
-            // 
-            this.lbLoginCadastro.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lbLoginCadastro.AutoSize = true;
-            this.lbLoginCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbLoginCadastro.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLoginCadastro.Location = new System.Drawing.Point(497, 32);
-            this.lbLoginCadastro.Name = "lbLoginCadastro";
-            this.lbLoginCadastro.Size = new System.Drawing.Size(207, 28);
-            this.lbLoginCadastro.TabIndex = 1;
-            this.lbLoginCadastro.Text = "Login / Cadastro";
-            this.lbLoginCadastro.Click += new System.EventHandler(this.lbLoginCadastro_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::locadora.Properties.Resources.logoFundoTransparente;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(127, 100);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(387, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 19);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Login / Cadastro";
             // 
             // label2
             // 
@@ -144,14 +118,19 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Alugar";
             // 
-            // label1
+            // panel3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(387, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Login / Cadastro";
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.lbReservar);
+            this.panel3.Controls.Add(this.lbAlugar);
+            this.panel3.Controls.Add(this.lbLoginCadastro);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.ForeColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(947, 117);
+            this.panel3.TabIndex = 3;
             // 
             // lbReservar
             // 
@@ -160,7 +139,7 @@
             this.lbReservar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbReservar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbReservar.ForeColor = System.Drawing.Color.White;
-            this.lbReservar.Location = new System.Drawing.Point(806, 32);
+            this.lbReservar.Location = new System.Drawing.Point(806, 43);
             this.lbReservar.Name = "lbReservar";
             this.lbReservar.Size = new System.Drawing.Size(112, 28);
             this.lbReservar.TabIndex = 3;
@@ -174,22 +153,48 @@
             this.lbAlugar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbAlugar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAlugar.ForeColor = System.Drawing.Color.Red;
-            this.lbAlugar.Location = new System.Drawing.Point(710, 32);
+            this.lbAlugar.Location = new System.Drawing.Point(710, 43);
             this.lbAlugar.Name = "lbAlugar";
             this.lbAlugar.Size = new System.Drawing.Size(90, 28);
             this.lbAlugar.TabIndex = 2;
             this.lbAlugar.Text = "Alugar";
             this.lbAlugar.Click += new System.EventHandler(this.lbAlugar_Click);
             // 
-            // lbUsuario
+            // lbLoginCadastro
             // 
-            this.lbUsuario.AutoSize = true;
-            this.lbUsuario.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.lbUsuario.Location = new System.Drawing.Point(135, 32);
-            this.lbUsuario.Name = "lbUsuario";
-            this.lbUsuario.Size = new System.Drawing.Size(84, 28);
-            this.lbUsuario.TabIndex = 4;
-            this.lbUsuario.Text = "label3";
+            this.lbLoginCadastro.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbLoginCadastro.AutoSize = true;
+            this.lbLoginCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbLoginCadastro.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLoginCadastro.Location = new System.Drawing.Point(497, 43);
+            this.lbLoginCadastro.Name = "lbLoginCadastro";
+            this.lbLoginCadastro.Size = new System.Drawing.Size(207, 28);
+            this.lbLoginCadastro.TabIndex = 1;
+            this.lbLoginCadastro.Text = "Login / Cadastro";
+            this.lbLoginCadastro.Click += new System.EventHandler(this.lbLoginCadastro_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::locadora.Properties.Resources.logoFundoTransparente;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(158, 114);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.SystemColors.Window;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(947, 118);
+            this.panel2.TabIndex = 1;
             // 
             // Home
             // 
@@ -203,12 +208,13 @@
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -216,21 +222,19 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox slidePic;
         private System.Windows.Forms.Timer timer1;
-       //private System.Windows.Forms.PictureBox slidePic;
-        //private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Label lbLoginCadastro;
-        public System.Windows.Forms.Label lbAlugar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Label lbReservar;
-        public System.Windows.Forms.Label lbUsuario;
+        public System.Windows.Forms.Label lbAlugar;
+        public System.Windows.Forms.Label lbLoginCadastro;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

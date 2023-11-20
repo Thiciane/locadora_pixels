@@ -13,7 +13,7 @@ namespace locadora.model
         }
         public double CalcularConta(double preco)
         {
-            return Conta = preco * Convert.ToDouble(TempoCarro);
+            return this.Conta = preco * Convert.ToDouble(this.TempoCarro);
         }
     }
 }

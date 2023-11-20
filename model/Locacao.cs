@@ -1,57 +1,70 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace locadora.model
 {
     internal class Locacao
     {
-        public DateTime dataR { get; set; }
-        public DateTime dataD { get; set; }
-        public double valorC { get; set; }
-        public string seguro { get; set; }
-
-
-        public Locacao(DateTime dataR, DateTime dataD, double valorC, string seguro, double multa)
-        {
-            this.dataR = dataR;
-            this.dataD = dataD;
-            this.valorC = valorC;
-            this.seguro = seguro;
-
-        }
+        public DateTime DataRet { get; set; }
+        public DateTime DataDev { get; set; }
+        public string Seguro { get; set; }
 
         public Locacao()
         {
         }
 
-        public int Dias(DateTime dataR, DateTime dataD)
+        public Locacao(DateTime dataR, DateTime dataD, string seguro)
         {
-            this.dataR = dataR;
-            this.dataD = dataD;
-            TimeSpan ts = dataD.Subtract(dataR);
-            string texto = ts.Days.ToString();
-            int dias = int.Parse(texto);
+            this.DataRet = dataR;
+            this.DataDev = dataD;
+            this.Seguro = seguro;
+
+        }
+        public bool Verifica(DateTime dataR, DateTime dataD)
+        {
+            if (dataD >= DateTime.Today)
+            {
+                if (dataD > dataR)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+            /*if (tx_data_dev.Value == tx_data_ret.Value)
+            {
+                MessageBox.Show("O mínimo de tempo com o carro é 24 horas", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }*/
+        }
+
+        public int TotalDias()
+        {
+            int dias = 0;
+            TimeSpan ts = this.DataDev.Subtract(this.DataRet);
+            string texto = ts.Days.ToString();//convertendo para dias
+            dias = int.Parse(texto); //convertendo para int
             return dias;
         }
 
-        public double Carros(double valorC, string seguro, DateTime dataR, DateTime dataD)
-        {
-            double valor = 0;
-            if (seguro == "Sim")
-            {
-                valor = (valorC * Dias(dataR, dataD)) + 100;
 
-                return valor;
+        public double ValorAluguel(double valorCarro)
+        {
+          
+            if (this.Seguro == "Sim")
+            {
+                return (valorCarro * this.TotalDias()) + 100;
+                 
             }
 
             else
             {
-                valor = (valorC * Dias(dataR, dataD)) + 0;
-
-                return valor;
+                return (valorCarro * this.TotalDias());
+                
             }
 
         }

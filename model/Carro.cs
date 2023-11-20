@@ -1,18 +1,21 @@
-﻿using System;
-
-namespace locadora.model
+﻿namespace locadora.model
 {
     public class Carro
     {
         public string Marca { get; set; }
         public string Modelo { get; set; }
         public double Preco { get; set; }
+
+        public Carro()
+        {
+
+        }
         public Carro(string marca, string modelo)
         {
             this.Marca = marca;
             this.Modelo = modelo;
         }
-
+       
         public double DefinirPreco()
         {
             if (this.Marca == "Chevrolet")

@@ -6,30 +6,30 @@ namespace locadora
 {
     public partial class Home : Form
     {
+        view.Login login = new view.Login();
+
         public Home()
         {
             InitializeComponent();
             lbAlugar.Text = String.Empty;
             lbReservar.Text = String.Empty;
-            lbUsuario.Text = String.Empty;
-            lbLoginCadastro.Location = new Point(700, 32);
+            lbLoginCadastro.Location = new Point(700, 43);
         }
 
-        view.Login login = new view.Login();
-        private int imageNumber = 0;
+        private int numeroImagem = 1;
         private void LoadNextImage()
         {
-            if (imageNumber == 6)
+            if (numeroImagem == 7)
             {
-                imageNumber = 1;
+                numeroImagem = 1;
             }
-            slidePic.ImageLocation = string.Format(@"Images\carrosselCarros\{0}.png", imageNumber);
-            imageNumber++;
+            pictureBox3.ImageLocation = string.Format($@"carrosselCarros\{numeroImagem}.png");
+            numeroImagem++;
         }
-
-        private void timer2_Tick(object sender, EventArgs e)
+        private void timer2_Tick_1(object sender, EventArgs e)
         {
             LoadNextImage();
+
         }
         private void lbLoginCadastro_Click(object sender, EventArgs e)
         {
@@ -56,6 +56,5 @@ namespace locadora
         {
             login.ShowDialog();
         }
-
     }
 }

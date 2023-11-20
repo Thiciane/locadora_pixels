@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace locadora.view
 {
+
     public partial class Cadastro : Form
     {
+        model.ClienteMetodos clienteMet = new model.ClienteMetodos();
+        Home home = new Home();
+
 
         public Cadastro()
         {
@@ -20,36 +17,68 @@ namespace locadora.view
 
         private void Cadastro_Load(object sender, EventArgs e)
         {
-
+            clienteMet.ListarClientes();
         }
 
-        private void bCadastrar_Click(object sender, EventArgs e)
+        private void bt_cadastrar_Click(object sender, EventArgs e)
         {
-            model.Cliente cliente = new model.Cliente();
-            cliente.Nome = tbNome.Text;
-            cliente.Email = tbEmail.Text;
-            cliente.Cep = mkCep.Text;
-            cliente.Bairro = tbBairro.Text;
-            cliente.Localidade = tbLocalidade.Text;
-            cliente.Cpf = mkCpf.Text;
-            cliente.Cnh = mkCnh.Text;
-
-            if (cliente.VerificarCliente(cliente.Email) == false)
+            if (ValidaCampus())
             {
-                cliente.AddCliente(cliente);
+                model.Cliente cliente = new model.Cliente()
+                {
+                    Nome = tbNome.Text,
+                    Email = tbEmail.Text,
+                    Cep = mkCep.Text,
+                    Bairro = tbBairro.Text,
+                    Localidade = tbLocalidade.Text,
+                    Cpf = mkCpf.Text,
+                    Cnh = mkCnh.Text
+                };
+                if (!clienteMet.VerificarCliente(cliente.Email))
+                {
+                    clienteMet.SalvarCliente(cliente);
 
-                Home home = new Home();
-                home.lbUsuario.Text = cliente.Nome;
-                home.lbLoginCadastro.Text = String.Empty;
-                home.lbAlugar.Text = "Alugar";
-                home.lbReservar.Text = "Reservar";
+                    home.lbLoginCadastro.Text = String.Empty;
+                    home.lbAlugar.Text = "Alugar";
+                    home.lbReservar.Text = "Reservar";
+                    home.ShowDialog();
+                    Close();
+
+                }
+                else
+                {
+                    MessageBox.Show("Usuário já cadastrado", "Faça login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }            
+        }
+        private bool ValidaCampus()
+        {
+            bool estado = true;
+            if (tbNome.Text == "" || tbEmail.Text == "")
+            {
+                estado = false;
+                errorProvider1.SetError(tbNome, "Campo obrigatório!");
+                errorProvider1.SetError(tbEmail, "Campo obrigatório!");
+            }
+            return estado;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tbNome.Text = String.Empty;
+            tbEmail.Text = String.Empty;
+            tbBairro.Text = String.Empty;
+            tbLocalidade.Text = String.Empty;
+            mkCep.Text = String.Empty;
+            mkCnh.Text = String.Empty;
+            mkCpf.Text = String.Empty;
+
+
+
+            if (MessageBox.Show("Deseja mesmo cancelar?", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
                 home.ShowDialog();
                 Close();
-
-            }
-            else if(tbNome.Text.Equals("adm") && tbEmail.Text.Equals("adm@gmail.com"))
-            {
-                MessageBox.Show("Usuário já cadastrado", "Faça login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }
