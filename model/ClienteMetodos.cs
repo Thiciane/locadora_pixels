@@ -8,7 +8,9 @@ namespace locadora.model
 {
     internal class ClienteMetodos
     {
-        public List<Cliente> listClientes = new List<Cliente>();
+        private string caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Clientes.xml");
+        private XmlSerializer serializer = new XmlSerializer(typeof(List<Cliente>));
+        private List<Cliente> listClientes = new List<Cliente>();
 
         //adiciona o cliente na list
         public void AdicionarClienteLista(Cliente a)
@@ -25,15 +27,13 @@ namespace locadora.model
         //transforma o arquivo xml em list 
         public List<Cliente> ListarClientes()
         {
-            string caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Clientes.xml");
 
-            if (File.Exists(caminhoArquivo))
+            if (File.Exists(this.caminhoArquivo))
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(List<Cliente>));
 
-                using (FileStream fileStream = new FileStream(caminhoArquivo, FileMode.Open))
+                using (FileStream fileStream = new FileStream(this.caminhoArquivo, FileMode.Open))
                 {
-                    this.listClientes = (List<Cliente>)serializer.Deserialize(fileStream);
+                    this.listClientes = (List<Cliente>)this.serializer.Deserialize(fileStream);
                 }
             }
 
@@ -43,14 +43,11 @@ namespace locadora.model
         //adiciona o cliente ao arquivo xml por meio da list
         public void SalvarCliente(Cliente a)
         {
-            string caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Clientes.xml");
             AdicionarClienteLista(a);
 
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Cliente>));
-
-            using (FileStream fileStream = new FileStream(caminhoArquivo, FileMode.Create))
+            using (FileStream fileStream = new FileStream(this.caminhoArquivo, FileMode.Create))
             {
-                serializer.Serialize(fileStream, listClientes);
+                this.serializer.Serialize(fileStream, listClientes);
             }
         }
     }

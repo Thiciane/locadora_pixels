@@ -51,10 +51,7 @@ namespace locadora.view
             if (locacao.Verifica(locacao.DataRet, locacao.DataDev) == false)
             {
                 MessageBox.Show("Datas incorretas", "Erro");
-            }
-            if(tb_marca.Text == "" || tb_modelo.Text == "")
-            {
-                MessageBox.Show("Marca ou modelo não seleciono", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
             else
             {
@@ -65,7 +62,14 @@ namespace locadora.view
 
                 locacao.Seguro = tb_seguro.Text;
                 tx_fatura.Text = locacao.ValorAluguel(preco).ToString("C");
+                MessageBox.Show("Alugado", "Status do aluguel", MessageBoxButtons.OK);
+
             }
+            if (tb_marca.Text == "" || tb_modelo.Text == "")
+            {
+                MessageBox.Show("Marca ou modelo não selecionado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
